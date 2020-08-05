@@ -27,11 +27,20 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
+    - name: 'NPM install'
+      run: npm install
+
+    - name: 'Coding Convention Checks - File names'
+      run: npx file-name-linter .file-name-linter.json
+
+    - name: 'Azure Policy JSON Schema Checks'
+      run: npx ajv validate --format=full --all-errors --errors=no --extend-refs=fail -s vendor/schema-azure-policydefinition-2019-09-01.json -r "vendor/referenced/*.json" -d "policies/*-rule.json"
+
     - name: Terraform Validate
       run: terraform validate
       
     - name: Terraform Format
-      run: terraform fmt -check
+      run: terraform fmt -check -diff
 
     - name: Terraform Plan
       run: terraform plan

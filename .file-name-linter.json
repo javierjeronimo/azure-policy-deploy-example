@@ -1,0 +1,8 @@
+{
+    "rules": {
+        "policies/": [
+            "[a-z]+[0-9]+_(000|[a-z]{3})_(audit|deny)_v.+-(rule|params)\\.",
+            "\\.json$"
+        ]
+    }
+}

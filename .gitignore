@@ -31,3 +31,6 @@ override.tf.json
 # Others
 terraform.exe
 debug.log
+
+# NodeJS
+node_modules

@@ -1,0 +1,24 @@
+{
+  "name": "azure-policy-deploy-example",
+  "version": "1.0.0",
+  "description": "Example CI/CD pipeline for Azure Policy",
+  "main": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javierjeronimo/azure-policy-deploy-example.git"
+  },
+  "keywords": [
+    "azure",
+    "policy"
+  ],
+  "author": "Javier Jerónimo Suárez <hola@javierjeronimo.es>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "ajv-cli": "^3.1.0",
+    "file-name-linter": "^1.1.0",
+    "npx": "^10.2.2"
+  }
+}
