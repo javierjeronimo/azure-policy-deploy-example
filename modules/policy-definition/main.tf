@@ -1,8 +1,8 @@
 # MIT License
 
 locals {
-  policy_rule_file   = format("/policies/%s_v%s-rule.json", var.policy_id, var.policy_version)
-  policy_params_file = format("/policies/%s_v%s-params.json", var.policy_id, var.policy_version)
+  policy_rule_file   = format("policies/%s_v%s-rule.json", var.policy_id, var.policy_version)
+  policy_params_file = format("policies/%s_v%s-params.json", var.policy_id, var.policy_version)
   policy_name        = "${var.policy_id}_v${var.policy_version}"
 }
 

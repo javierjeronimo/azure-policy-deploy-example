@@ -4,6 +4,16 @@ provider "azurerm" {
   features {}
 }
 
+terraform {
+  backend "remote" {
+    organization = "javierjeronimo"
+
+    workspaces {
+      name = "azure-policy-deploy-example"
+    }
+  }
+}
+
 # Deploy just a single Azure Policy definition.
 module "policy" {
   source          = "./modules/policy-definition"
